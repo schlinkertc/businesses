@@ -1,0 +1,23 @@
+{# application/templates/confirm.jinja2 #}
+
+{% extends "layout.jinja2" %}
+{% block content %}
+<div class="card">
+    <h1 class="site-title">Confirm Business</h1>
+    <body>
+     <table border = 1>
+        {% for key,value in result.items() if key in ['name','display_address','categories'] %}
+            <tr>
+                <th> {{ key }} </th>
+                <td> {{ value }} </td>
+            </tr>
+        {% endfor %}
+     </table>
+     <form action="" method="post">
+         {{ form.csrf_token() }}
+         <p>{{ form.confirm }}</p>
+     </form>
+
+    </body>
+</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.jinja2" %}
+
+{% block content %}
+<div class="card">
+  <img src="{{ url_for('static', filename='img/logo.png') }}" class="logo" />
+  <h1 class="site-title">{{ title }}</h1>
+  <p class="subtitle">An Interactive Map (View source code on <a href="https://github.com/schlinkertc">Github</a>).</p>
+  <a href="/dashapp/" class="dash-link">
+    <span>View Map</span>
+    <i class="fas fa-arrow-right"></i>
+  <a href="/submit/" class="form-link">
+    <span>Submit a Business</span>
+    <i class="fas fa-arrow-right"></i>
+  </a>
+</div>
+{% endblock %}
